@@ -22,13 +22,6 @@ As a user I would like:
 > * to create a blog from the application.
 > * to delete comments that I find insulting or degrading.
 
-## How to use it
-
-> * Internet connection
-> * Click https://blog-here.herokuapp.com/) <br/>
-  or <br/>
-> * Copy https://blog-here.herokuapp.com/) and  Paste the link on your prefered browser
-
 ## How it works
 
 > * A user can sign up
