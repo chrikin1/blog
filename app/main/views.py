@@ -13,7 +13,7 @@ from datetime import datetime
 def index():
     title= "Blog On | Home "
     all = Post.query.order_by('-id').all()
-    print(f'blogs {all}')
+    # print(f'blogs {all}')
   
     subscribers = SubscribersForm()
     try:
@@ -76,7 +76,7 @@ def post():
 @main.route('/post/<id>', methods=['POST','GET'])
 def fullpost(id):
     
-    title= f'Posts' 
+    # title= f'Posts' 
     post = Post.query.filter_by(id=id).first()
     Comments = CommentForm()
     if Comments.validate_on_submit():
@@ -89,7 +89,7 @@ def fullpost(id):
     postcomments = Comment.query.filter_by(post_id=id).all()
      
 
-    return render_template('fullpost.html', title = title, post = post, comment = Comments, allcomments = allcomments, postcomments = postcomments)
+    return render_template('fullpost.html',  post = post, comment = Comments, allcomments = allcomments, postcomments = postcomments)
 
             
 

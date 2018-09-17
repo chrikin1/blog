@@ -2,8 +2,8 @@ from flask_login import UserMixin, current_user, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import login_manager
 from datetime import datetime
-from . import db, admin
-from flask_admin.contrib.sqla import ModelView
+from . import db
+#from flask_admin.contrib.sqla import ModelView
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -42,11 +42,7 @@ class User(UserMixin,db.Model):
     def verify_password(self, password):
         return check_password_hash(self.pass_secure, password)
 
-    def __repr__(self):
-        return f'User{self.username}'
-
-
-# Blog Post class
+    # def __repr__(self):
 class Post(UserMixin, db.Model):
     """ 
     class modelling the posts
@@ -65,8 +61,8 @@ class Post(UserMixin, db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     comments = db.relationship('Comment', backref='post', lazy='dynamic')
 
-    def __repr__(self):
-        return f'Post{self.post}'
+    # def __repr__(self):
+    #     return 'Post{self.post}'
 
 # Role class 
 class Role(UserMixin, db.Model):
@@ -82,7 +78,7 @@ class Role(UserMixin, db.Model):
     
 
     def __repr__(self):
-        return f'Post{self.name}'
+        return 'Post{self.name}'
 
 # comments
 class Comment(UserMixin, db.Model):
@@ -101,8 +97,8 @@ class Comment(UserMixin, db.Model):
     users_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
     
-    def __repr__(self):
-        return f'Post{self.comment}'
+    # def __repr__(self):
+    #     return 'Post{self.comment}'
 
 
 class Subscribers(UserMixin, db.Model):
@@ -113,16 +109,16 @@ class Subscribers(UserMixin, db.Model):
     id= db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String, unique=True)
 
-    def __repr__(self):
-        return f'Subscribers{self.email}'
+    # def __repr__(self):
+    #     return 'Subscribers{self.email}'
 
-class MyModelView(ModelView):
+# class MyModelView(ModelView):
     def is_accessible(self):
         return False
 
             
 
-admin.add_view(ModelView(User, db.session))
-admin.add_view(ModelView(Post, db.session))
-admin.add_view(ModelView(Comment, db.session))
-admin.add_view(ModelView(Subscribers, db.session))        
+# # admin.add_view(ModelView(User, db.session))
+# admin.add_view(ModelView(Post, db.session))
+# admin.add_view(ModelView(Comment, db.session))
+# admin.add_view(ModelView(Subscribers, db.session))        

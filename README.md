@@ -1,10 +1,10 @@
 # Blog
 
-> A personal  blogging website where you can create and share your opinions and other users can read and comment on them
+> A Blog where users can subscribe, post and comment on articles posted.
 
 ## Author
 
-> By CHRIS IAN
+> By **CHRIS BARTOO**
 
 ## Description
 
@@ -20,7 +20,8 @@ As a user I would like:
 > * to be alerted when a new post is made by joining a subscription.
 > * to sign in to the blog.
 > * to create a blog from the application.
->   * to delete comments that I find insulting or degrading.
+> * to delete comments that I find insulting or degrading.
+
 
 ## How it works
 
@@ -35,3 +36,4 @@ As a user I would like:
 > * Bootstrap and Css
 > * PostgreSQL
 > * SQLAlchemy
+
