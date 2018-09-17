@@ -112,13 +112,13 @@ class Subscribers(UserMixin, db.Model):
     # def __repr__(self):
     #     return 'Subscribers{self.email}'
 
-# class MyModelView(ModelView):
+class MyModelView(ModelView):
     def is_accessible(self):
         return False
 
             
 
-# # admin.add_view(ModelView(User, db.session))
-# admin.add_view(ModelView(Post, db.session))
-# admin.add_view(ModelView(Comment, db.session))
-# admin.add_view(ModelView(Subscribers, db.session))        
+admin.add_view(ModelView(User, db.session))
+admin.add_view(ModelView(Post, db.session))
+admin.add_view(ModelView(Comment, db.session))
+admin.add_view(ModelView(Subscribers, db.session))        
