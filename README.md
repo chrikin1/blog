@@ -4,9 +4,7 @@
 
 ## Author
 
-> By **Sarah Marion**
-
-> -----------------------------------------------------------
+> By CHRIS IAN
 
 ## Description
 
