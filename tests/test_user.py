@@ -35,6 +35,6 @@ class UserModelTest(unittest.TestCase):
 
 
     def tearDown(self):
-        user = User.query.filter_by(username="cjjhvghxdf").first()
+        user = User.query.filter_by(username="cjjhvghxdjhbvf").first()
         if user:
             print("found")
