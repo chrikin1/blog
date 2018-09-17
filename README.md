@@ -1,6 +1,6 @@
 # Blog
 
-> A personal blogging website where you can create and share your opinions and other users can read and comment on them
+> A personal  blogging website where you can create and share your opinions and other users can read and comment on them
 
 ## Author
 
@@ -20,7 +20,7 @@ As a user I would like:
 > * to be alerted when a new post is made by joining a subscription.
 > * to sign in to the blog.
 > * to create a blog from the application.
-> * to delete comments that I find insulting or degrading.
+>   * to delete comments that I find insulting or degrading.
 
 ## How it works
 
