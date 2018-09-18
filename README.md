@@ -22,7 +22,6 @@ As a user I would like:
 > * to create a blog from the application.
 > * to delete comments that I find insulting or degrading.
 
-
 ## How it works
 
 > * A user can sign up
@@ -36,4 +35,3 @@ As a user I would like:
 > * Bootstrap and Css
 > * PostgreSQL
 > * SQLAlchemy
-

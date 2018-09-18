@@ -3,7 +3,8 @@ from flask_login import login_required, current_user
 from flask_admin.contrib.sqla import ModelView
 from . forms import PostForm, CommentForm, SubscribersForm
 from .import main
-from .. import db, basic_auth
+# from .. import db, basic_auth
+from .. import db
 import markdown2
 from .email import mail_message
 from ..models import User, Post, Role, Comment, Subscribers
